@@ -4,7 +4,7 @@ namespace RandomizeTestlet.Models;
 
 internal sealed class Testlet
 {
-    public string TestletId { get; private set; }
+    public string TestletId { get; }
     private readonly List<Item> _items;
 
     public Testlet(CreateTestlet createTestlet)
