@@ -8,7 +8,7 @@ namespace RandomizeTestlet.Models;
 /// Although I could have created a Validate method directly in the this model,
 /// I created an Extension <see cref="CreateTestletExtensions"/>.
 /// </summary>
-internal class CreateTestlet
+internal sealed class CreateTestlet
 {
     public string TestletId { get; init; } = default!;
     public List<Item> Items { get; init; } = default!;
