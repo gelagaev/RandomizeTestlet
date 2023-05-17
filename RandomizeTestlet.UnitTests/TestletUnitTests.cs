@@ -16,8 +16,8 @@ public sealed class TestletUnitTests
         const int pretestItemsCount = 4;
         const int operationalItemsCount = 6;
         _items = new List<Item>(pretestItemsCount + operationalItemsCount);
-        _items.AddRange(GetItems(ItemType.Pretest, pretestItemsCount));
-        _items.AddRange(GetItems(ItemType.Operational, operationalItemsCount));
+        _items.AddRange(CreateItems(ItemType.Pretest, pretestItemsCount));
+        _items.AddRange(CreateItems(ItemType.Operational, operationalItemsCount));
         _testlet = new Testlet(_faker.Random.String(), _items);
     }
 
@@ -41,7 +41,7 @@ public sealed class TestletUnitTests
         Assert.Equivalent(_items, actual, true);
     }
 
-    private IEnumerable<Item> GetItems(ItemType itemType, int count)
+    private IEnumerable<Item> CreateItems(ItemType itemType, int count)
     {
         while (count > 0)
         {
