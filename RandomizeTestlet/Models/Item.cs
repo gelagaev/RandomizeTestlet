@@ -11,4 +11,9 @@ internal sealed class Item
     {
         return ItemType == ItemType.Pretest;
     }
+
+    public bool IsOperationalItem()
+    {
+        return ItemType == ItemType.Operational;
+    }
 }

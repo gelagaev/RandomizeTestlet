@@ -1,14 +1,17 @@
+using RandomizeTestlet.Extensions;
+
 namespace RandomizeTestlet.Models;
 
 internal sealed class Testlet
 {
-    public readonly string TestletId;
+    public string TestletId { get; private set; }
     private readonly List<Item> _items;
 
-    public Testlet(string testletId, List<Item> items)
+    public Testlet(CreateTestlet createTestlet)
     {
-        TestletId = testletId;
-        _items = items;
+        createTestlet.Validate();
+        TestletId = createTestlet.TestletId;
+        _items = createTestlet.Items;
     }
 
     public List<Item> Randomize()
