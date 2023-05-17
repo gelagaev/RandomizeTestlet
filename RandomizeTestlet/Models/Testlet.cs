@@ -14,7 +14,6 @@ internal sealed class Testlet
     public List<Item> Randomize()
     {
         const int preTestItemsCount = 2;
-
         var randomizedItems = new List<Item>(_items.Count);
 
         var pretestItems = _items.Where(item => item.IsPretestItem()).ToList();

@@ -2,6 +2,6 @@ namespace RandomizeTestlet.Enums;
 
 internal enum ItemType
 {
-  Pretest = 1,
-  Operational = 2,
+    Pretest = 1,
+    Operational = 2,
 }
